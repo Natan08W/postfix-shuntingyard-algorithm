@@ -14,7 +14,7 @@ def shunt(strExpression):
             else: # Normal operators
                 while stack: # Skip precedence when empty stack
                     try:
-                        if (token[1] >= token[1] and token[1] > 3) or (token[1] > token[1] and token[1] <= 3):
+                        if (stack[-1][1] >= token[1] and token[1] > 3) or (stack[-1][1] > token[1] and token[1] <= 3):
                             output.append(stack.pop())
                         else: break
                     except IndexError:
